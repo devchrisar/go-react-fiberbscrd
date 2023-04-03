@@ -1,0 +1,24 @@
+version = 1
+
+exclude_patterns = [
+  "/client/public/",
+  "/client/*.config.js"
+]
+
+[[analyzers]]
+name = "javascript"
+
+  [analyzers.meta]
+  plugins = ["react"]
+
+[[analyzers]]
+name = "go"
+
+  [analyzers.meta]
+  import_root = "github.com/devchrisar/go-react-fiberbscrd"
+
+[[transformers]]
+name = "prettier"
+
+[[transformers]]
+name = "gofmt"
